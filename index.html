@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <!-- ai fitness tracker, Idris Zahir -->
+<head>
+  <!-- =========================
+       Meta / App Configuration
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Fitness Tracker</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- =========================
+       App Container
+  ========================== -->
+  <main class="container">
+
+    <!-- ===== App Header ===== -->
+    <header>
+      <h1>AI Fitness Tracker</h1>
+      <p class="sub">
+        Track workouts and receive AI-driven training suggestions.
+      </p>
+    </header>
+
+    <!-- =========================
+         Workout Input Form
+    ========================== -->
+    <section class="card">
+      <form id="workoutForm">
+        <label>
+          Exercise Name
+          <input id="exercise" placeholder="Bench Press" required />
+        </label>
+
+        <div class="row">
+          <label>
+            Sets
+            <input id="sets" type="number" min="1" value="3" required />
+          </label>
+
+          <label>
+            Reps
+            <input id="reps" type="number" min="1" value="8" required />
+          </label>
+
+          <label>
+            Weight (lb)
+            <input id="weight" type="number" min="0" value="135" required />
+          </label>
+        </div>
+
+        <button type="submit">Log Workout</button>
+      </form>
+    </section>
+
+    <!-- =========================
+         App Output Panels
+    ========================== -->
+    <section class="grid">
+
+      <!-- Workout History -->
+      <article class="card">
+        <h2>Workout Log</h2>
+        <ul id="log" class="list"></ul>
+      </article>
+
+      <!-- AI Recommendation -->
+      <article class="card">
+        <h2>AI Recommendation</h2>
+        <p id="suggestion">
+          Add a workout to receive an AI training suggestion.
+        </p>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Application Logic  -->
+  <script src="app.js"></script>
+</body>
+</html>
+
