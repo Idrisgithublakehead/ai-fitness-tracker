@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Fitness Tracker | Dashboard</title>
-  <link rel="stylesheet" href="style.css?v=3" />
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -24,79 +23,89 @@
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="login.html" id="loginLink">Login</a>
         <a class="nav-link" href="#" id="logoutLink" style="display:none;">Logout</a>
-
       </nav>
     </div>
   </header>
 
+  <!-- HERO VIDEO (full width, behind top content) -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="container">
+        <!-- Page Header -->
+        <section class="page-header hero-header">
+          <h1>Dashboard</h1>
+          <p class="sub">Log workouts and get training suggestions.</p>
+        </section>
+
+        <!-- Main Grid -->
+        <section class="grid-2">
+          <!-- Workout Form -->
+          <section class="card">
+            <h2>Log Workout</h2>
+
+            <form id="workoutForm">
+              <label>
+                Exercise
+                <input id="exercise" placeholder="Bench Press" required />
+              </label>
+
+              <div class="row">
+                <label>
+                  Sets
+                  <input id="sets" type="number" min="1" value="3" required />
+                </label>
+
+                <label>
+                  Reps
+                  <input id="reps" type="number" min="1" value="8" required />
+                </label>
+
+                <label>
+                  Weight (lb)
+                  <input id="weight" type="number" min="0" value="135" required />
+                </label>
+              </div>
+
+              <button type="submit">Log Workout</button>
+            </form>
+
+            <p class="hint">Tip: use consistent exercise names to track progression.</p>
+          </section>
+
+          <!-- AI Recommendation -->
+          <section class="card">
+            <h2>AI Recommendation</h2>
+
+            <p id="suggestion" class="recommendation">
+              Add a workout to receive a training suggestion.
+            </p>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-label">Workouts Logged</div>
+                <div id="statCount" class="stat-value">0</div>
+              </div>
+
+              <div class="stat">
+                <div class="stat-label">Total Volume</div>
+                <div id="statVolume" class="stat-value">0</div>
+              </div>
+            </div>
+
+            <a class="link" href="history.html">View full history →</a>
+          </section>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Everything below is normal page flow -->
   <main class="container">
-    <!-- Page Header -->
-    <section class="page-header">
-      <h1>Dashboard</h1>
-      <p class="sub">Log workouts and get training suggestions.</p>
-    </section>
-    
-    <!-- Main Grid -->
-    <section class="grid-2">
-      <!-- Workout Form -->
-      <section class="card">
-        <h2>Log Workout</h2>
-
-        <form id="workoutForm">
-          <label>
-            Exercise
-            <input id="exercise" placeholder="Bench Press" required />
-          </label>
-
-          <div class="row">
-            <label>
-              Sets
-              <input id="sets" type="number" min="1" value="3" required />
-            </label>
-
-            <label>
-              Reps
-              <input id="reps" type="number" min="1" value="8" required />
-            </label>
-
-            <label>
-              Weight (lb)
-              <input id="weight" type="number" min="0" value="135" required />
-            </label>
-          </div>
-
-          <button type="submit">Log Workout</button>
-        </form>
-
-        <p class="hint">
-          Tip: use consistent exercise names to track progression.
-        </p>
-      </section>
-
-      <!-- AI Recommendation -->
-      <section class="card">
-        <h2>AI Recommendation</h2>
-
-        <p id="suggestion" class="recommendation">
-          Add a workout to receive a training suggestion.
-        </p>
-
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-label">Workouts Logged</div>
-            <div id="statCount" class="stat-value">0</div>
-          </div>
-
-          <div class="stat">
-            <div class="stat-label">Total Volume</div>
-            <div id="statVolume" class="stat-value">0</div>
-          </div>
-        </div>
-        
-        <a class="link" href="history.html">View full history →</a>
-      </section>
-    </section>
-    
     <!-- Recent Workouts -->
     <section class="card">
       <div class="card-head">
@@ -106,58 +115,46 @@
       <ul id="log" class="list"></ul>
     </section>
 
-    <!-- =========================
-     Explore Section (Feature Cards)
-     ========================= -->
-<section class="page-section">
-  <div class="section-head">
-    <h2 class="section-title">Explore</h2>
-    <p class="section-sub">Jump into your training history, insights, and project overview.</p>
-  </div>
-
-  <div class="feature-grid">
-    <a class="feature-card" href="history.html">
-      <div class="feature-top">
-        <span class="feature-kicker">History</span>
-        <h3 class="feature-title">Your Workout Log</h3>
-        <p class="feature-desc">
-          Browse everything you’ve logged and keep your training consistent.
-        </p>
+    <!-- Explore Section -->
+    <section class="page-section">
+      <div class="section-head">
+        <h2 class="section-title">Explore</h2>
+        <p class="section-sub">Jump into your training history, insights, and project overview.</p>
       </div>
-      <div class="feature-cta">Open History →</div>
-    </a>
 
-    <a class="feature-card" href="insights.html">
-      <div class="feature-top">
-        <span class="feature-kicker">Insights</span>
-        <h3 class="feature-title">Progress & Trends</h3>
-        <p class="feature-desc">
-          See totals, volume, and training patterns to guide progression.
-        </p>
+      <div class="feature-grid">
+        <a class="feature-card" href="history.html">
+          <div class="feature-top">
+            <span class="feature-kicker">History</span>
+            <h3 class="feature-title">Your Workout Log</h3>
+            <p class="feature-desc">Browse everything you’ve logged and keep your training consistent.</p>
+          </div>
+          <div class="feature-cta">Open History →</div>
+        </a>
+
+        <a class="feature-card" href="insights.html">
+          <div class="feature-top">
+            <span class="feature-kicker">Insights</span>
+            <h3 class="feature-title">Progress & Trends</h3>
+            <p class="feature-desc">See totals, volume, and training patterns to guide progression.</p>
+          </div>
+          <div class="feature-cta">Open Insights →</div>
+        </a>
+
+        <a class="feature-card" href="about.html">
+          <div class="feature-top">
+            <span class="feature-kicker">About</span>
+            <h3 class="feature-title">How It Works</h3>
+            <p class="feature-desc">Project overview, roadmap, and planned AI integration details.</p>
+          </div>
+          <div class="feature-cta">Open About →</div>
+        </a>
       </div>
-      <div class="feature-cta">Open Insights →</div>
-    </a>
-
-    <a class="feature-card" href="about.html">
-      <div class="feature-top">
-        <span class="feature-kicker">About</span>
-        <h3 class="feature-title">How It Works</h3>
-        <p class="feature-desc">
-          Project overview, roadmap, and planned AI integration details.
-        </p>
-      </div>
-      <div class="feature-cta">Open About →</div>
-    </a>
-  </div>
-</section>
-
+    </section>
   </main>
 
- 
   <script src="auth.js"></script>
   <script src="app.js"></script>
- 
- 
 </body>
 </html>
 
