@@ -1,6 +1,7 @@
 /* =========================
    Global Reset & Base Theme
    ========================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,6 +19,7 @@ body {
 /* =========================
    Layout
    ========================= */
+
 .container {
   max-width: 1100px;
   margin: 40px auto;
@@ -42,6 +44,7 @@ h1 {
 /* =========================
    Top Navigation
    ========================= */
+
 .topbar {
   position: sticky;
   top: 0;
@@ -90,12 +93,7 @@ h1 {
   font-weight: 500;
 }
 
-.nav-link:hover {
-  color: #ffffff;
-  background: #151821;
-  border-color: #2f3446;
-}
-
+.nav-link:hover,
 .nav-link.active {
   color: #ffffff;
   background: #151821;
@@ -105,6 +103,7 @@ h1 {
 /* =========================
    Cards
    ========================= */
+
 .card {
   background: #151821;
   border: 1px solid #262a38;
@@ -123,6 +122,7 @@ h1 {
 /* =========================
    Grids
    ========================= */
+
 .grid-2 {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -145,6 +145,7 @@ h1 {
 /* =========================
    Forms
    ========================= */
+
 label {
   display: block;
   margin-bottom: 14px;
@@ -188,6 +189,7 @@ button:hover {
 /* =========================
    Stats
    ========================= */
+
 .stat {
   background: #0f1115;
   border: 1px solid #262a38;
@@ -209,6 +211,7 @@ button:hover {
 /* =========================
    Lists & Links
    ========================= */
+
 .list {
   padding-left: 18px;
 }
@@ -236,8 +239,9 @@ button:hover {
 }
 
 /* =========================
-   Responsive
+   Responsive (CORE)
    ========================= */
+
 @media (max-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -251,3 +255,115 @@ button:hover {
     flex-wrap: wrap;
   }
 }
+
+/* =========================
+   Explore Section (Feature Cards)
+   ========================= */
+
+.page-section {
+  margin-top: 26px;
+  margin-bottom: 34px;
+}
+
+.section-head {
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.section-sub {
+  margin-top: 6px;
+  color: #b8bcc9;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+
+  text-decoration: none;
+  color: #e6e8ee;
+
+  background: radial-gradient(
+      1200px 400px at 20% 0%,
+      rgba(95, 135, 255, 0.08),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #151821, #10131a);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  padding: 18px;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 10px 25px rgba(0, 0, 0, 0.35);
+
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 0 1px rgba(95, 135, 255, 0.12) inset,
+    0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.feature-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(232, 235, 242, 0.7);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.feature-desc {
+  color: rgba(232, 235, 242, 0.7);
+  line-height: 1.55;
+}
+
+.feature-cta {
+  margin-top: 8px;
+  font-weight: 800;
+  color: rgba(232, 235, 242, 0.88);
+}
+
+.feature-card:hover .feature-cta {
+  color: #ffffff;
+}
+
+/* =========================
+   Explore Responsive
+   ========================= */
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
