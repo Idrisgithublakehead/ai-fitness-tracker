@@ -448,6 +448,7 @@ html, body {
   padding: 38px 0 46px;
   overflow: hidden;
   border-bottom: 1px solid #262a38;
+
 }
 
 .hero-video {
@@ -491,10 +492,162 @@ html, body {
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(15, 17, 21, 0.35),
-    rgba(15, 17, 21, 0.35)
+    rgba(15, 17, 21, 0.25),
+    rgba(15, 17, 21, 0.25)
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   Vision / Roadmap Section
+   ========================= */
+
+.vision {
+  position: relative;
+  margin-top: 80px; /* space from Explore */
+  min-height: 560px;
+  overflow: hidden;
+
+  /* outer frame */
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  /* depth */
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255,255,255,0.04) inset;
+
+    margin-top: 220px;
+}
+
+/* video fills the section */
+.vision-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* make it feel alive but not noisy */
+  filter: brightness(1.25) contrast(1.1) saturate(1.05);
+  transform: scale(1.04);
+}
+
+/* overlay for readability + polish */
+.vision-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      900px 500px at 20% 15%,
+      rgba(95, 135, 255, 0.22),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.55)
+    );
+  z-index: 1;
+}
+
+/* content sits above video */
+.vision-content {
+  position: relative;
+  z-index: 2;
+  padding: 72px 26px 26px;
+  text-align: center;
+  margin-left: -110px;
+}
+
+/* grid for the 3 cards */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 36px;
+}
+
+/* individual cards */
+.vision-card {
+  background: rgba(15, 17, 21, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 22px;
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 12px 28px rgba(0, 0, 0, 0.45);
+
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+/* subtle lift — not flashy */
+.vision-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* typography inside cards */
+.vision-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.vision-desc {
+  margin: 0;
+  color: rgba(232, 235, 242, 0.78);
+  line-height: 1.55;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .vision {
+    min-height: 640px;
+  }
+
+  .vision-content {
+    padding: 56px 18px 18px;
+    text-align: left;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.vision .section-sub{
+  display: inline-block;          /* makes transform behave nicely */
+  transform: translateX(72px);    
+}
+
+.vision-grid {
+  transform: translateX(195px);
+}
+
+
+
+
 
 
 
