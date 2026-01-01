@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Fitness Tracker | Login</title>
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">AI Fitness Tracker</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <a class="nav-link" href="history.html">History</a>
+        <a class="nav-link" href="insights.html">Insights</a>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Login</h1>
+      <p class="sub">Demo login (saved locally in your browser).</p>
+    </section>
+
+    <section class="card">
+      <h2>Sign in</h2>
+
+      <form id="loginForm">
+        <label>
+          Email
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          Password
+          <input id="password" type="password" placeholder="••••••••" required />
+        </label>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="hint">
+        Note: This is a portfolio demo. Password is not stored — only your email + login state.
+      </p>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
