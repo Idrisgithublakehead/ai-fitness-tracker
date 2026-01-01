@@ -283,6 +283,8 @@ button:hover {
   margin-left: 28%
 }
 
+/* added a section*/
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
