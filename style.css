@@ -261,7 +261,7 @@ button:hover {
    ========================= */
 
 .page-section {
-  margin-top: 26px;
+  margin-top: 190px;
   margin-bottom: 34px;
 }
 
@@ -270,22 +270,24 @@ button:hover {
 }
 
 .section-title {
-  font-size: 1.2rem;
+  font-size: 2.9rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.2px;
+  margin-left: 39%;
 }
 
 .section-sub {
-  margin-top: 6px;
+  margin-top: 1px;
   color: #b8bcc9;
+  margin-left: 28%
 }
 
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 14px;
+  margin-top: 44px;
 }
 
 .feature-card {
