@@ -54,6 +54,7 @@ h1 {
   background: rgba(15, 17, 21, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #262a38;
+  font-size: 1.1em;
 }
 
 .topbar-inner {
@@ -263,7 +264,7 @@ button:hover {
    ========================= */
 
 .page-section {
-  margin-top: 190px;
+  margin-top: 110px;
   margin-bottom: 34px;
 }
 
@@ -644,6 +645,252 @@ html, body {
 .vision-grid {
   transform: translateX(195px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   Testimonials
+   ========================= */
+.testimonials {
+  margin-top: 256px; /* more breathing room from section above */
+}
+
+.testimonials .section-head {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.testimonials .section-title {
+  font-size: 2.6rem;      /* big title like screenshot */
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  margin-left: -5px;
+  margin-top: 0px;
+}
+
+.testimonials .section-sub {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: rgba(232, 235, 242, 0.70);
+  margin-left: -9px;
+}
+
+/* more "square" cards */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+
+  /* FIX: make both columns + cards stretch evenly */
+  align-items: stretch;
+
+  /* FIX: pull whole grid toward center (less wide overall) */
+  max-width: 1100px;   /* tweak: 1000px / 950px if you want tighter */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-card {
+  background: linear-gradient(180deg, #151821, #10131a);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 18px;
+
+  /* FIX: remove max-width so both columns match perfectly */
+  width: 100%;
+
+  /* FIX: consistent height across all cards */
+  min-height: 220px;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 10px 22px rgba(0, 0, 0, 0.30);
+
+  transform: translateY(0);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+
+  /* FIX: forces same internal spacing so short quotes don’t shrink */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* hover pop */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 0 1px rgba(95, 135, 255, 0.10) inset,
+    0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.stars {
+  font-weight: 900;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.quote {
+  color: rgba(232, 235, 242, 0.82);
+  line-height: 1.55;
+  margin: 0 0 12px 0;
+}
+
+.byline {
+  color: rgba(232, 235, 242, 0.55);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .testimonial-card {
+    min-height: auto;
+  }
+}
+
+.testimonials {
+  margin-top: 160px;
+}
+
+.testimonials .section-head {
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
