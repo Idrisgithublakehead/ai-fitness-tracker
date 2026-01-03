@@ -431,7 +431,7 @@ html, body {
   z-index: 2;
 }
 
-/* Glass effect for cards over video */
+/* Added a Glass effect for cards over video */
 .video-bg .card {
   background: rgba(21, 24, 33, 0.82);
   backdrop-filter: blur(10px);
@@ -464,7 +464,7 @@ html, body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* less dark: tweak this value */
+  /* less dark*/
   background: rgba(15, 17, 21, 0.55);
 }
 
@@ -513,6 +513,34 @@ html, body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================
    Vision / Roadmap Section
    ========================= */
@@ -543,7 +571,7 @@ html, body {
   height: 100%;
   object-fit: cover;
 
-  /* make it feel alive but not noisy */
+  /* lets make it feel alive but not noisy */
   filter: brightness(1.25) contrast(1.1) saturate(1.05);
   transform: scale(1.04);
 }
@@ -566,14 +594,33 @@ html, body {
   z-index: 1;
 }
 
-/* content sits above video */
+
+
+.vision-content {
+  position: relative;
+  z-index: 2;
+  padding: 72px 26px 26px;
+  text-align: center;
+
+  /* REMOVE manual shifting */
+  margin-left: 0;
+
+  /* true centering */
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+/* content sits above video 
 .vision-content {
   position: relative;
   z-index: 2;
   padding: 72px 26px 26px;
   text-align: center;
   margin-left: -110px;
-}
+} */
 
 /* grid for the 3 cards */
 .vision-grid {
@@ -599,7 +646,7 @@ html, body {
   transition: transform 180ms ease, border-color 180ms ease;
 }
 
-/* subtle lift — not flashy */
+/* subtle lift which wont be too flashy */
 .vision-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.22);
@@ -636,15 +683,34 @@ html, body {
 }
 
 
-
+/*
 .vision .section-sub{
-  display: inline-block;          /* makes transform behave nicely */
+  display: inline-block;          /* this code to the left will make transform behave nicely 
   transform: translateX(72px);    
 }
 
 .vision-grid {
   transform: translateX(195px);
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -693,11 +759,11 @@ html, body {
   gap: 18px;
   margin-top: 18px;
 
-  /* FIX: make both columns + cards stretch evenly */
+  /*  make both columns + cards stretch evenly */
   align-items: stretch;
 
-  /* FIX: pull whole grid toward center (less wide overall) */
-  max-width: 1100px;   /* tweak: 1000px / 950px if you want tighter */
+  /* I have pulled whole grid toward center (less wide overall) */
+  max-width: 1100px;   /* a simple tweak 1000px / 950px if you want tighter */
   margin-left: auto;
   margin-right: auto;
 }
@@ -708,10 +774,10 @@ html, body {
   border-radius: 18px;
   padding: 18px;
 
-  /* FIX: remove max-width so both columns match perfectly */
+  /*  remove max-width so both columns match perfectly */
   width: 100%;
 
-  /* FIX: consistent height across all cards */
+  /*  consistent height across all cards */
   min-height: 220px;
 
   box-shadow:
@@ -721,7 +787,7 @@ html, body {
   transform: translateY(0);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 
-  /* FIX: forces same internal spacing so short quotes don’t shrink */
+  /* this right here is going to  forces same internal spacing so short quotes don’t shrink */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
